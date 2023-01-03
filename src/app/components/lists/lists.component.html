@@ -1,0 +1,19 @@
+<section class="all">
+<section class="allLists">
+  <div class="rond" *ngFor="let list of allLists">
+    <h1 *ngIf="list.list_title">{{ list.list_title }}</h1>
+
+    <form [formGroup]="newList" *ngIf="!list.list_title" class="secondCircle">
+      <input type="text" onclick="this.style.outline='none'" autofocus placeholder="Ajouter une liste" formControlName="listAdded"/>
+      <button mat-button color="primary" class="btnValidate"accesskey="enter" (click)="validateList(objUser.loginUser.user_id, list.list_title)"> Add</button>
+    </form>
+    <form [formGroup]="newList" *ngIf="list.list_title" >
+      <button class="btnDesc" (click)="onOpenModal(list)"  mat-raised-button color="hidden" matBadge="8" matBadgePosition="before" matBadgeColor="accent">CHECK DESCRIPTION</button>
+      <input  type="text" onclick="this.style.outline='none'" class="inputModify" autofocus placeholder={{list.list_title}} formControlName="listModified"/>
+      <button  class="btnDelete" mat-button color="warn" (click)="deleteList(list.todolist_id,objUser.loginUser.user_id)"> <mat-icon>delete_forever</mat-icon>Delete</button>
+      <button  class="btnUpdate" mat-button color="primary" (click)="updateList(list.todolist_id,list.list_title)"> <mat-icon>create</mat-icon> Update</button>
+    </form>
+  </div>
+  <button class="btnAdd" (click)="addList()">+</button>
+</section>
+</section>

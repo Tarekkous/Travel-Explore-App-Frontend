@@ -1,0 +1,11 @@
+<p>Update your description :</p>
+
+<form [formGroup]="updateInput" *ngIf="data">
+  <mat-form-field class="example-full-width">
+    <mat-label>Task</mat-label>
+    <input matInput #message maxlength="256" formControlName="taskUpdate" placeholder={{data.description}}>
+    </mat-form-field>
+  <button mat-button color="primary" type="submit" (click)="onUpdate(data.detail_id ,data.description)"><mat-icon>create</mat-icon>
+    Update
+  </button>
+</form>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Todo-Descriptions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+<section class="container">
+<form [formGroup]="inputDesc">
+  <h1>{{dataList.list_title}}</h1>
+
+  <table id="todo-list" *ngIf="dataList">
+    <tr>
+      <th>What are you going to do ? 🤷‍♂️</th>
+      <th>Delete ❌</th>
+      <th>Update ✔️</th>
+    </tr>
+
+    <tr *ngFor="let desc of allDescriptions">
+      <td class="champDesc">{{ desc.description }}</td>
+      <td><button (click)="onDelete(desc.detail_id)" mat-button color="warn"> <mat-icon>delete_forever</mat-icon>DELETE</button></td>
+      <td><button (click)="onOpenModal(desc)" mat-button color="primary"><mat-icon>create</mat-icon>UPDATE</button></td>
+    </tr>
+  </table>
+  <div  *ngIf="!task">
+    <mat-form-field class="example-full-width">
+      <mat-label>Task</mat-label>
+      <input matInput #message maxlength="256" formControlName="description" placeholder="Ex. I have to visit Paris...">
+      <mat-hint align ="start"><strong>Don't disclose personal info</strong> </mat-hint>
+      <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+      </mat-form-field>
+    <button type="submit" mat-button color="primary"  (click)="postTask(dataList.todolist_id, inputTest)"><mat-icon>queue</mat-icon>
+    Add
+    </button>
+</div>
+  <div  *ngIf="task">
+     <mat-form-field class="example-full-width">
+      <mat-label>Task</mat-label>
+      <input matInput #message maxlength="256" formControlName="description" placeholder="Ex. I have to visit Paris...">
+      <mat-hint align ="start"><strong>Don't disclose personal info</strong> </mat-hint>
+      <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+      </mat-form-field>
+    <button type="submit" mat-button color="primary"(click)="postTask(task.todolist_id, task.description)">
+      <mat-icon>queue</mat-icon> Add
+    </button>
+  </div>
+</form>
+<button  class="exitBtn" (click)="onExit()" mat-button color="warn">❌</button>
+<button class="btnDownload" mat-fab extended (click)="download()"><mat-icon>arrow_downward</mat-icon>Download PDF</button>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+

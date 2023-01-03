@@ -1,0 +1,47 @@
+<section class="container">
+  <div class="form-container">
+    <div class="Contact">
+      <h2 class="title register-hover">CONTACT</h2>
+      <form [formGroup]="contactForm" class="form" >
+        <label for="firstName">First-Name</label>
+        <input
+          type="text"
+          formControlName="firstName"
+          id=""
+          name="firstName"
+          placeholder="enter your First-Name"
+        />
+        <label for="lastName">Last-Name</label>
+        <input
+          type="text"
+          formControlName="lastName"
+          id=""
+          name="lastName"
+          placeholder="enter your Last-Name"
+        />
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          formControlName="email"
+          id=""
+          name="email"
+          placeholder="Enter your E-mail"
+        />
+        <label for="message">Message</label>
+        <textarea
+          formControlName="message"
+          name="message"
+          id=""
+          cols="30"
+          rows="8"
+          placeholder="Type your message here"
+        ></textarea>
+        <p>
+          <button class="btn" (click)="postForm()">
+            Submit
+          </button>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

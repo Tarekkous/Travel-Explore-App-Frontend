@@ -1,0 +1,178 @@
+<div class="container">
+  <div class="row gutters">
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="account-settings">
+            <div class="user-profile">
+              <div class="user-avatar">
+                <img
+                  src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                  alt="Maxwell Admin"
+                />
+              </div>
+              <div *ngIf="objUserGetted">
+                <h5 class="user-name">{{ objUserGetted.user_firstname}} {{objUserGetted.user_lastname}}</h5>
+                <h6 class="user-email">{{ objUserGetted.user_mail }}</h6>
+              </div>
+            </div>
+            <div class="about">
+              <h1>My Profile</h1>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form [formGroup]="userCord" *ngIf="objUser">
+      <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+        <div class="card h-100">
+          <div class="card-body">
+            <section class="all">
+              <div class="personalDetail">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <h2 class="mb-2 text-primary">Personal Details</h2>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="firstName"
+                      id="firstName"
+                      placeholder={{objUser.loginUser.user_firstname}}
+                    />
+                  </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input
+                      type="text"
+                      [value]="objUser.loginUser.user_lastname"
+                      formControlName="lastName"
+                      class="form-control"
+                      id="lastName"
+                      placeholder={{objUser.loginUser.user_lastname}}
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="eMail">Email</label>
+                    <input
+                      type="email"
+                      formControlName="email"
+                      [value]="objUser.user_mail"
+                      class="form-control"
+                      id="eMail"
+                      placeholder={{objUser.loginUser.user_mail}}
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="password">password</label>
+                    <input
+                      type="password"
+                      formControlName="password"
+                      class="form-control"
+                      id="password"
+                      placeholder="password"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="personalAdress">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <h2 class="mt-3 mb-2 text-primary">Address</h2>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="Street">Street</label>
+                    <input
+                      type="name"
+                      formControlName="street"
+                      class="form-control"
+                      id="Street"
+                      placeholder="Enter Street"
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="ciTy">City</label>
+                    <input
+                      type="name"
+                      formControlName="city"
+                      class="form-control"
+                      id="ciTy"
+                      placeholder="Enter City"
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="sTate">State</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="state"
+                      id="sTate"
+                      placeholder="Enter State"
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="zIp">Zip Code</label>
+                    <input
+                      type="text"
+                      formControlName="zipCode"
+                      class="form-control"
+                      id="zIp"
+                      placeholder="Zip Code"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="text-right">
+                  <button type="button" mat-button color="accent" name="submit" class="btn btn-secondary" (click)="onCancel()">
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    name="submit"
+                    mat-button color="primary"
+                    class="btn btn-primary"
+                    (click)="
+                      onUpdate(objUser.loginUser.user_id, objUser.loginUser)
+                    "
+                  >
+                    Update
+                  </button>
+                  <button
+                  type="button"
+                  mat-button color="warn"
+                  name="submit"
+                  class="btn btn-primary"
+                  (click)="
+                    onDelete(objUser.loginUser.user_id)
+                  "
+                >
+                  Delete
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

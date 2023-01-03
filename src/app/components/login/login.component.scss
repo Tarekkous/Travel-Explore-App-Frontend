@@ -1,0 +1,47 @@
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // background-color: red;
+  background-image: url("https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg");
+  // background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.photo-paysage.com%2Fthumbnails.php%3Falbum%3D217&psig=AOvVaw3r_p2BtfXPyCuo9FwNdWuj&ust=1667474255735000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKDRwOevj_sCFQAAAAAdAAAAABAE")
+  //   top left no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  .login-form{
+    background-color: rgba(255, 255, 255, 0.868);
+    padding: 30px;
+    border-radius: 10px;
+
+  > h2 {
+    margin-left: 50px;
+    font-size: 15px;
+    font-weight: 500;
+   }
+
+  }
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  margin: 10px 0 20px;
+  &:nth-child(4) {
+    margin: 20px 0 0;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+p > a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}

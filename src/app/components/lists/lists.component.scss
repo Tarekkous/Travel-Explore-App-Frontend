@@ -1,0 +1,123 @@
+.all{
+  background-image: url('https://wallpaper.dog/large/20505161.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
+  height: 120vh;
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.allLists {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .rond {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #333;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2%;
+
+    .inputModify{
+      display: none;
+    }
+    &:hover h1 {
+      display: none;
+    }
+
+    &:hover .inputModify {
+      display: block;
+      height: 30px;
+      font-size: 15px;
+      background: none;
+    }
+    &:hover .btnDesc{
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -50%;
+      border-radius: 50px;
+      background-color: rgba(255, 255, 255, 0.322);
+    }
+    &:hover .btnDelete{
+      display: block;
+    }
+    &:hover .btnUpdate{
+      display: block;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+    input {
+      border: none;
+      text-align: center;
+      font-size: 15px;
+      background: none;
+    }
+    .btnDesc{
+      display: none;
+    }
+    .btnValidate {
+      width: 40px;
+      position: absolute;
+      bottom: 20%;
+      right: 20%;
+      &:hover {
+        cursor: pointer;
+      }
+
+    }
+
+    .btnDelete {
+      width: 50px;
+      position: absolute;
+      bottom: 15%;
+      right: 20%;
+      display: none;
+      &:hover {
+        cursor: pointer;
+      }
+    };
+    .btnUpdate {
+      width: 55px;
+      position: absolute;
+      bottom: 15%;
+      left: 20%;
+      display: none;
+      &:hover {
+        cursor: pointer;
+      }
+    };
+
+
+    .secondCircle {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .btnAdd {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    cursor: pointer;
+    font-size: 32px;
+    background-color: rgb(169, 209, 169);
+    &:hover {
+      transform: scale(1.05);
+    background-color: rgb(122, 173, 122);
+
+    }
+  }
+};

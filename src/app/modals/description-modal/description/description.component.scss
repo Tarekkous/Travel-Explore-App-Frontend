@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bebas+Neue&family=Cousine&family=Dancing+Script&family=Dosis:wght@200&family=Fredericka+the+Great&family=Glory:wght@100&family=Hind+Madurai:wght@300&family=Indie+Flower&family=Kavoon&family=Koulen&family=Lobster&family=Lobster+Two&family=M+PLUS+1:wght@100&family=Open+Sans:wght@300&family=Pacifico&family=Quicksand:wght@600&family=Source+Sans+Pro:wght@200&family=Tapestry&display=swap');
+#todo-list {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#todo-list td, #todo-list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+h1 {
+  text-align: center;
+  padding: 5px;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Quicksand', sans-serif;
+
+
+}
+
+#todo-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #007A7A;
+  color: white;
+}
+.container{
+  background-color: #c1f0f0;
+  min-height: 100%;
+  width: 100%;
+
+}
+.exitBtn {
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+}
+.champDesc{
+  height: 100%;
+  display: flex;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: none;
+}
+.btnDownload {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  &:hover{
+    transform: scale(0.95);
+  }
+}

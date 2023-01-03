@@ -1,0 +1,80 @@
+// .container{
+//   background-image: url('https://wallpaper.dog/large/20505161.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   height: 120vh;
+//   position: relative;
+//   h1 {
+//     text-align: center;
+//     font-size: 40px;
+//     font-weight: 800;
+//     letter-spacing: 3px;
+//     position: absolute;
+//     top: 50%;
+//     left: 17%;
+
+//   }
+// }
+.container {
+    background-image: url('https://wallpaper.dog/large/20505161.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  font-size: 2rem;
+  font-family: Raleway;
+  font-weight: bold;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  margin-top: 5%;
+  max-width: 100%;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+  animation: 1s linear infinite tilt-shaking;
+  &:hover {
+    animation: none;
+    transform: scale(1.1);
+  }
+
+}
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+.typewriter {
+	width: 21.5ch;
+  height: 40px;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 4px solid #212121;
+	animation: cursor 1s step-start infinite,
+    text 3s steps(27) alternate infinite;
+}
+
+@keyframes cursor {
+	0%, 100% {
+    border-color: #212121;
+  }
+}
+
+@keyframes text {
+	0% {
+    width: 0;
+  }
+	100% {
+    width: 21.5ch;
+  }
+}

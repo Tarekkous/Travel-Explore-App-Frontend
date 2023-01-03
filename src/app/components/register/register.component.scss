@@ -1,0 +1,67 @@
+* ::before ::after {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg");
+  height: 120vh;
+  width: 98.7vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 100px;
+  background-color: rgba(255, 255, 255, 0.868);
+  padding: 30px;
+  border-radius: 10px;
+
+}
+
+.sendButton {
+  width: 30%;
+  margin: auto;
+}
+.loginBtn{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  p {
+    font-size: 12px;
+    color: #333;
+  }a {
+    color: blue;
+    letter-spacing: 2px;
+    width: 150px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  margin-left: 80%;
+}
+.addSkills {
+  // display: flex;
+  // justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+
+
+// .btnSkill {
+//   display: flex;
+//   justify-content: flex-end;
+//   margin: 20px 0 15px;
+// }
+
+.inputSkill {
+  width: 100%;
+}

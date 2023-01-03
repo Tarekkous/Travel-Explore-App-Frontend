@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://wallpaper.dog/large/20505161.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.form-container {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  top: 30%;
+  left: 30%;
+  position: absolute;
+}
+
+.Contact {
+  width: 100%;
+  max-height: 90%;
+  background: rgb(149, 0, 255);
+  background: linear-gradient(
+    45deg,
+    #009D9A 0%,
+    #007F99 25%,
+    #00CCCC 52%,
+    #339966 76%,
+    #2E7D7E 98%
+  );
+  background-size: 300%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  animation: bg-animation 5s infinite alternate;
+}
+
+textarea{
+  margin: 10px;
+  background-color: #cac9d4;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+.title {
+  text-align: center;
+  padding: 15px;
+  padding-top: 20px;
+  font-family: "Baloo 2", cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+.black {
+  color: black;
+}
+
+.form {
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+}
+
+input {
+  padding: 5px;
+  margin:10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #cac9d4;
+  color: black;
+}
+label{
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover{
+    background-color: #0077b6;
+    color: black;
+    font-weight: 700;
+  }
+}
+
+
+
+.login {
+  width: 300px;
+  height: 350px;
+  background-color: #ffffff;
+
+  border-radius: 50px;
+
+  position: absolute;
+  top: 280px;
+  transition: 0.7s ease-out;
+}
+
+.login:hover {
+  top: 70px;
+}
+
+.login:hover + .register-hover {
+  font-size: 20px;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}

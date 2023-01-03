@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bebas+Neue&family=Cousine&family=Dancing+Script&family=Dosis:wght@200&family=Fredericka+the+Great&family=Glory:wght@100&family=Hind+Madurai:wght@300&family=Indie+Flower&family=Kavoon&family=Koulen&family=Lobster&family=Lobster+Two&family=M+PLUS+1:wght@100&family=Open+Sans:wght@300&family=Pacifico&family=Prosto+One&family=Quicksand:wght@600&family=Source+Sans+Pro:wght@200&family=Tapestry&display=swap');
+section {
+  margin: 0;
+  padding-top: 15px;
+  height: 100px;
+  width: 100%;
+  background-color: #0996a8;
+  box-sizing: border-box;
+  h1 {
+    font-size: 32px;
+    font-weight: 800px;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 15px;
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+@media screen and (width :1280px ) {
+  section {
+    height: 100px;
+  }
+}
